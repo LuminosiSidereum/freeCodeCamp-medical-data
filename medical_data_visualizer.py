@@ -36,7 +36,6 @@ def draw_cat_plot():
     # 8
     fig = plt.gcf()
 
-
     # 9
     fig.savefig('catplot.png')
 #%%
@@ -61,8 +60,10 @@ def draw_heat_map():
     fig, ax = plt.subplots()
     
     # 15
-    sns.heatmap(corr,mask=mask,annot=True,annot_kws={"size":7},fmt=".1f",square="equal",linewidths=.5)
-    fig = plt.gcf()    
+    sns.heatmap(corr,mask=mask,annot=True,annot_kws={"size":7},fmt=".1f",square=True,linewidths=.5,cmap="Greens")
+    fig = plt.gcf()   
+    fig.tight_layout()
+     
     # 16
     fig.savefig('heatmap.png')
 # %%
